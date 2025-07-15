@@ -1,0 +1,481 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+    font-family: 'Frunchy';
+    src: url('Frunchy-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.line {
+   /* Navigation bar */
+
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 84px;
+    background: #FFFCF3;
+    border-bottom: 1px solid #3B58B4;
+
+}
+
+header {
+    width: 980px;
+    height: 142px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    width: 980px;
+    color: #3B58B4;
+    font-size: 50px;
+    font-family: Frunchy;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 20px 0;
+}
+
+header h3 {
+    width: 980px;
+    color: #3B58B4;
+    font-size: 30px;
+    font-style: italic;
+}
+
+body {
+    background: #FFFCF3;
+    margin: 0 auto
+}
+
+.chat-wrapper {
+    width: 100%;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 1200px; 
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.chat-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.sender {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 4px;
+    margin-left: 30px;
+}
+  
+.chat-bubble {
+    position: relative;
+    background-color: #3B58B4;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: fit-content;
+    margin-left: 0px;
+    line-height: 24px;
+}
+  
+.bubble-tail {
+    position: absolute;
+    left: -6px;         
+    top: 22px;          
+    width: 24px;        
+    height: auto;
+}
+
+.bubble-tail-right {
+    position: absolute;
+    top: 5px;          
+    width: 24px;        
+    height: auto;
+    right: -9px;
+}
+
+.chat-container_right {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-self: flex-end;       
+    margin-right: 40px;          
+}
+
+.chat-container_right .chat-bubble {
+   position: relative;
+    background-color: #CBECFF;
+    color: #3B58B4;
+    padding: 14px 24px;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: fit-content;
+    margin-left: auto; 
+    margin-right: 0;   
+    line-height: 24px;
+}
+
+.receiver {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 4px;
+    margin-left: 30px;
+}
+
+
+.page2 {
+    position: relative;
+    margin-top: 150px; 
+    text-align: center;
+}
+
+.block_wrapped {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* căn giữa theo chiều ngang */
+    margin-top: 20px;
+    color: #3B58B4;
+    align-items: center;
+}
+
+
+.block {
+    display: flex;
+    width:  840px; /* Or a suitable max-width for your design */
+    max-width: 90%; /* Using a percentage for better responsiveness */
+    gap: 60px;
+    align-items: center; /* Vertically aligns items in the middle */
+    margin: 0 auto; /* Centers the block itself within block_wrapped */
+    padding: 20px 0; /* Add some padding if needed */
+}
+ 
+.block .content {
+    flex: 1; /* Allows the content to take up remaining space */
+    text-align: center; /* Aligns text within the content block to the left */
+    line-height: 20px;
+}
+
+.block .content .title {
+    /* Add styles for your title if not already present */
+    font-size: 24px; /* Example font size */
+    font-weight: bold; /* Example font weight */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.block .content .para {
+    width: 100%; /* Make the paragraph take full width of its parent .content */
+    margin: 0; /* Remove previous auto margin */
+    text-align: justify;
+    align-self: center;
+}
+
+.btn-wrapper button {
+    width: 200px;
+    height: 40px;
+    color: #E06045;
+    border: 1px solid #E06045;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px 0;
+    border-radius: 50px;
+}
+
+.line_55 {
+    width: 55%;
+    border-bottom: 1px solid #3B58B4;
+    margin: 0 auto;
+}
+
+.quote {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: #E06045;
+    background-color: #FCDED6;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+}
+
+.about_me {
+    margin: 60px 0;
+}
+
+.about_me .btn-wrapper button {
+    width: 160px;
+    height: 40px;
+    color: #E06045;
+    border: none;
+    background: #FCDED6;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px 0;
+    border-radius: 50px;
+}
+
+.behind_the_scene {
+    width: 100%;
+    line-height: 100px;
+    color: #3B58B4;
+    background-color: #FCDED6;
+    align-items: center;
+    font-size: 40px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.part_wrapped {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.part_wrapped .title {
+    padding-top: 100px;
+}
+
+.first_part {
+    width: 80%;
+}
+
+.first_part .topic {
+    align-items: center;
+    text-align: center;
+}
+
+.part_wrapped .first_part .topic {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.img_wrapped {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+.img_wrapped img {
+    border-radius: 50px;
+    justify-content: space-between;
+}
+
+.behind_the_scene button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    margin: 80px 0;
+}
+
+.submit_form {
+    align-items: center;
+    text-align: center;
+    color: #3B58B4;
+}
+
+
+.submit_form .title {
+    font-size: 50px;
+    margin: 40px 0;
+}
+
+.submit_form .invite {
+    width: 1216px;
+    max-width: 1400px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    gap: 40px; 
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.col_1, .col_2 {
+    box-sizing: border-box;
+}
+
+.col_1 {
+    width: 50%;
+}
+
+.col_1 h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+}
+
+.col_1 p {
+    text-align: left;
+    font-size: 26px;
+    font-weight: lighter;
+}
+
+.col_1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.half-image-vertical {
+    width: 100%; /* hoặc chiều rộng cụ thể như 493px */
+    height: 490px; /* hiển thị nửa trên */
+    overflow: hidden;
+    border-radius: 20px; /* áp dụng border-radius ở đây nếu muốn bo góc toàn ảnh */
+    position: relative;
+}
+
+.half-image-vertical img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -100px; /* dịch ảnh xuống nếu cần */
+    left: 0;
+    border-radius: 20px; /* nếu bạn muốn ảnh cũng có border-radius riêng */
+    display: block;
+}
+
+.col_2 {
+    width: 70%;
+}
+
+.col_2 p {
+    text-align: left;
+    font-size: 26px;
+    padding: 0 20px 20px 20px;
+    text-align: justify;
+}
+
+.form-section {
+    text-align: left;
+    background-color: #fefaf0; 
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #3B58B4; 
+}
+
+.form-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #3B58B4;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #3B58B4;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #3B58B4;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #3B58B4;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #3B58B4;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-section .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-section .btn-wrapper button {
+    width: 100px;
+}
